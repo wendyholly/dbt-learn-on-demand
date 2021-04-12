@@ -7,7 +7,7 @@ with payments as (
         status,
         round(amount/100,2) amount
 
-    from raw.stripe.payment
+    from {{source('stripe','payment')}}
 
 )
 
